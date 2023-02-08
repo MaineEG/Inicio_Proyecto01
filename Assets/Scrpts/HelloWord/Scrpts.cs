@@ -5,6 +5,8 @@ using UnityEngine;
 public class Scrpts : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    [SerializeField] private string mensaje;
     void Start()
     {
         
@@ -14,5 +16,10 @@ public class Scrpts : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Saludar ()
+    {
+        Debug.Log(mensaje);
     }
 }
