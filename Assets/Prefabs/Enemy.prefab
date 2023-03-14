@@ -45,6 +45,9 @@ GameObject:
   - component: {fileID: 8529452351290519634}
   - component: {fileID: 7996366806803801286}
   - component: {fileID: 3904121715098957682}
+  - component: {fileID: 1652551724699741519}
+  - component: {fileID: 9068274758595595929}
+  - component: {fileID: 8825961402763249688}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -203,3 +206,50 @@ MonoBehaviour:
   capasSalto:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1652551724699741519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857449806448806990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91763cdb2ec8fa841a00ab6873a9238a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saludMax: 3
+  destruirAlMorir: 1
+  tiempoEnDestruirse: 0
+  alPerderSalud:
+    m_PersistentCalls:
+      m_Calls: []
+  alMorir:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9068274758595595929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857449806448806990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77816da5d00e28c46913344cdc42683b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equipo: 2
+--- !u!114 &8825961402763249688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857449806448806990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0e763a645acea4eb335ff60e9af067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantAtaque: 1
