@@ -10,25 +10,37 @@ public class Movimiento : MonoBehaviour
     [SerializeField] private float numeroSaltosExtra = 1.0f;
     [SerializeField] private float AlturaSalto = 2.0f;
     [SerializeField] private LayerMask capasSalto;
+    [Range(0, 1)]
+    [SerializeField] private float modificadorVelSalto = 0.5f;
+
 
     private Rigidbody2D rb;
     private BoxCollider2D boxcollider;
     private float SaltosHechos = 0; //contador
+    private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxcollider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
         ColisionSuelo();
-    }
-    
+    } 
+
     public void MoverseEnX(float movimientoX)
     {
         rb.velocity = new Vector2(movimientoX * rapidezCaminar, rb.velocity.y);
+        if (animator!= null)
+        {
+           // animator.SetBool("estaCorriendo", movimientoX != 0);
+            animator.SetBool("estaCorriendo", Mathf.Abs(movimientoX) > Mathf.Epsilon);
+        }     
+    
     }
 
     public void Saltar(bool valor)
